@@ -1,0 +1,38 @@
+/*-----------------SASS A CSS------------------------*/
+//------------GENERAL--------------//
+@import "./_01-General/App";
+
+@import "./_01-General/SweetAlert";
+@import "./_01-General/Toastify";
+
+
+//------------HEADER--------------//
+
+@import "./_03-Componentes/HeaderUnificado";
+
+
+
+
+//------------SIDEBAR--------------//
+@import "./_03-Componentes/Sidebar";
+
+//-----------HOME - MAIN-----------------//
+@import "./_03-Componentes/MainPublicidadSlider";
+@import "./_03-Componentes/MainContent";
+
+
+
+@import "./_03-Componentes/MainTemporizadorTareas";
+@import "./_03-Componentes/MainTemporizadorTimePicker";
+
+
+
+//--------------FOOTER----------------//
+@import "./_03-Componentes/Footer";
+@import "./_03-Componentes/FooterGondraWorldDev";
+
+@import "./_03-Componentes/Contacto";
+
+
+@import "./_03-Componentes/ConsultasAyuda";
+
