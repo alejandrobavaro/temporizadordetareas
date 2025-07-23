@@ -1,37 +1,7 @@
-import React, { useEffect, useState } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React from "react";
 import "../assets/scss/_03-Componentes/_ContactoFormularioSlider.scss";
 
 const ContactoFormularioSlider = () => {
-  const [productos, setProductos] = useState([]);
-
-  useEffect(() => {
-    const fetchProductos = async () => {
-      try {
-        const response = await fetch("/productos.json");
-        const productos = await response.json();
-        setProductos(productos);
-      } catch (error) {
-        console.error("Error al cargar los productos:", error);
-      }
-    };
-
-    fetchProductos();
-  }, []);
-
-  const settings = {
-    dots: false, // Cambiado a false para ocultar puntos de navegación
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: true,
-  };
-
   return (
     <div className="gridPadreContacto2">
       <div className="contact-form-slider-container">
@@ -104,13 +74,7 @@ const ContactoFormularioSlider = () => {
             </div>
           </form>
         </div>
-        <div className="slider-column box-shadow">
-          <h2 className="slider-title">
-            <i className="bi bi-person-arms-up" /> ADMINISTRA TU DINERO{""}
-            <i className="bi bi-person-arms-up" />
-          </h2>
-         <img className="gifTamaño" src="../../img/05-gif/dinero-animado.gif" alt="" />
-        </div>
+       
       </div>
     </div>
   );

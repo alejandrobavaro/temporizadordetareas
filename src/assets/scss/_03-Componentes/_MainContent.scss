@@ -1,16 +1,15 @@
 .main-content-container {
   width: 100%;
   overflow: hidden;
-
-  background-size: cover;
+  // background: linear-gradient(135deg, rgba(167, 119, 227, 0.1), rgba(110, 142, 251, 0.1));
+  border-radius: 12px;
+  // box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .main-content-container .content-wrapper {
   margin: 0 auto;
-  padding: 15px;
-
+  padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 /* Estilos para animaciones de hojas */
@@ -18,7 +17,7 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  background-image: url('../../../../public/img/04-img-banners/banner10.png');
+  // background-image: url('/img/04-img-banners/banner10.png');
   background-size: contain;
   animation: floating 6s ease-in-out infinite;
 }
@@ -38,12 +37,12 @@
 /* Estilos responsivos */
 @media (max-width: 768px) {
   .main-content-container .content-wrapper {
-    padding: 10px;
+    padding: 1.5rem;
   }
 }
 
 @media (max-width: 576px) {
   .main-content-container .content-wrapper {
-    padding: 5px;
+    padding: 1rem;
   }
 }

@@ -1,262 +1,132 @@
-/*--------------Estilos Globales Rediseñados--------------*/
+/* Estilos Globales */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif; // Cambio a tipografía más moderna
 }
 
 html {
   font-size: 100%;
-  background-color: #f8f9fa; // Fondo más claro y neutro
+  font-family: 'Orbitron', sans-serif;
 }
 
-/*--------------Estilos Body--------------*/
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f8f9fa; // Fondo sólido claro en lugar de imagen
-  color: #212529; // Color de texto más neutro
-  line-height: 1.5;
-}
-
-/*--------------Estilos para el Contenedor Principal--------------*/
+/* Estilos para el Contenedor Principal */
 .app {
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  transition: all 0.3s ease;
-  background-color: transparent; // Eliminamos el patrón de fondo
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #ffffff;
+  padding: 0;
+}
+
+.divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0;
 }
 
 .main-content {
+  flex: 1;
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
   max-width: 1400px;
   margin: 0 auto;
-  
-  @media (max-width: 768px) {
-    gap: 0.75rem; // Gap más pequeño en móvil
-  }
-  
-  @media (min-width: 1024px) {
-    gap: 1.5rem; // Gap más grande en escritorio
-  }
+  width: 100%;
+  padding: 1rem;
 }
 
 .content {
-  flex-grow: 1;
-  background-color: #ffffff; // Fondo blanco puro
-  border-radius: 8px; // Bordes menos redondeados
-  padding: 1rem; // Padding más ajustado
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); // Sombra más sutil
-  
-  @media (min-width: 768px) {
-    padding: 1.25rem; // Padding un poco mayor en tablet
-  }
-  
-  @media (min-width: 1024px) {
-    padding: 1.5rem; // Padding mayor en escritorio
-  }
+  flex: 1;
+  // background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/*--------------Estilos para los Encabezados y Texto--------------*/
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 1rem;
-  color: #343a40; // Color de texto más neutro
-  font-weight: 500; // Peso de fuente más ligero
-}
-
-h1 {
-  font-size: 2rem; // Tamaño más moderado
-  margin-bottom: 1.25rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-
-  i {
-    color: #6c757d; // Color de icono más neutro
-  }
-}
-
-h2 {
-  font-size: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #e9ecef; // Borde más sutil
-}
-
-h3 {
-  font-size: 1.25rem;
-}
-
-p {
-  font-size: 1rem;
-  color: #495057; // Color de texto más neutro
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-/*--------------Estilos para Enlaces--------------*/
-a {
-  color: #0d6efd; // Azul estándar para enlaces
-  text-decoration: none;
-  transition: color 0.2s ease;
-
-  &:hover {
-    color: #0b5ed7; // Azul más oscuro al hover
-    text-decoration: underline;
-  }
-}
-
-/*--------------Estilos para Botones--------------*/
-button, .button {
-  background-color: #0d6efd; // Azul estándar
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem; // Padding más ajustado
-  border-radius: 6px; // Bordes menos redondeados
-  font-size: 0.9375rem;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  transition: all 0.2s ease;
-
-  &:hover {
-    background-color: #0b5ed7; // Azul más oscuro al hover
-    transform: none; // Eliminamos el efecto de levitación
-  }
-
-  &.secondary {
-    background-color: #6c757d; // Gris para botones secundarios
-
-    &:hover {
-      background-color: #5c636a;
-    }
-  }
-
-  &.outline {
-    background-color: transparent;
-    border: 1px solid #0d6efd;
-    color: #0d6efd;
-
-    &:hover {
-      background-color: rgba(13, 110, 253, 0.1);
-    }
-  }
-}
-
-/*--------------Estilos para Formularios--------------*/
-input, textarea, select {
-  width: 100%;
-  padding: 0.5rem 0.75rem; // Padding más ajustado
-  border: 1px solid #ced4da; // Borde más neutro
-  border-radius: 6px; // Bordes menos redondeados
-  font-size: 1rem;
-  transition: border-color 0.15s ease-in-out;
-
-  &:focus {
-    outline: none;
-    border-color: #86b7fe; // Borde de enfoque más sutil
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); // Sombra de enfoque estándar
-  }
-}
-
-.input-group {
-  margin-bottom: 1rem; // Margen inferior más ajustado
-
-  label {
-    display: block;
-    margin-bottom: 0.25rem; // Margen inferior más pequeño
-    font-size: 0.875rem; // Tamaño de fuente más pequeño
-    color: #495057; // Color más neutro
-    font-weight: 500; // Peso de fuente más moderado
-  }
-}
-
-/*--------------Estilos para Tarjetas--------------*/
+/* Estilos para Tarjetas */
 .card {
-  background-color: #ffffff;
-  border-radius: 8px; // Bordes menos redondeados
-  padding: 1rem; // Padding más ajustado
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); // Sombra más sutil
-  margin-bottom: 1rem; // Margen inferior más ajustado
-  border: 1px solid #e9ecef; // Borde más sutil
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 
   &-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.75rem; // Margen inferior más ajustado
-    padding-bottom: 0.5rem; // Padding inferior más ajustado
-    border-bottom: 1px solid #e9ecef; // Borde más sutil
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
     h2, h3, h4 {
       margin-bottom: 0;
+      color: #ffffff;
     }
   }
 }
 
-/*--------------Estilos para Alertas--------------*/
-.alert {
-  padding: 0.75rem 1rem;
-  border-radius: 6px; // Bordes menos redondeados
-  margin-bottom: 1rem;
-  font-size: 0.875rem; // Tamaño de fuente más pequeño
-  border-left: none; // Eliminamos el borde lateral
-  border: 1px solid transparent; // Borde transparente por defecto
+/* Estilos para Botones */
+button, .button {
+  background-color: #a777e3;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 
-  &-success {
-    background-color: #d1e7dd;
-    color: #0f5132;
-    border-color: #badbcc;
+  &:hover {
+    background-color: #6e8efb;
+    transform: translateY(-2px);
   }
 
-  &-error {
-    background-color: #f8d7da;
-    color: #842029;
-    border-color: #f5c2c7;
+  &.secondary {
+    background-color: rgba(255, 255, 255, 0.2);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
   }
 
-  &-info {
-    background-color: #cfe2ff;
-    color: #084298;
-    border-color: #b6d4fe;
-  }
+  &.outline {
+    background-color: transparent;
+    border: 1px solid #a777e3;
+    color: #a777e3;
 
-  &-warning {
-    background-color: #fff3cd;
-    color: #664d03;
-    border-color: #ffecb5;
+    &:hover {
+      background-color: rgba(167, 119, 227, 0.1);
+    }
   }
 }
 
-/*--------------Animaciones Simplificadas--------------*/
-.fade-in {
-  animation: fadeIn 0.3s ease forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/*--------------Responsive--------------*/
+/* Estilos responsivos */
 @media (max-width: 768px) {
   .app {
-    padding: 0.5rem; // Padding más ajustado en móvil
+    padding: 0.5rem;
   }
 
-  .main-content {
-    flex-direction: column;
-  }
-
-  h1 {
-    font-size: 1.5rem; // Tamaño más pequeño en móvil
+  .content {
+    padding: 1rem;
   }
 }
 
 @media (min-width: 1024px) {
   .app {
-    padding: 1.5rem; // Padding mayor en escritorio
+    padding: 1.5rem;
+  }
+
+  .content {
+    padding: 2rem;
   }
 }
